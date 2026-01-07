@@ -11,8 +11,7 @@ echo "-------------------------------------"
 read -p "Enter new username: " NEWUSER
 
 if [[ -n "$NEWUSER" ]]; then
-    # Create user with groups
-    chroot /mnt/gentoo useradd -m -G users,wheel,audio,video,usb,input -s /bin/bash "$NEWUSER"
+    chroot /mnt/gentoo useradd -m -G users,wheel,audio -s /bin/bash "$NEWUSER"
     
     echo "Set password for $NEWUSER:"
     chroot /mnt/gentoo passwd "$NEWUSER"
