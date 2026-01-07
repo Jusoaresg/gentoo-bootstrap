@@ -11,7 +11,7 @@ RM=$(lsblk -no RM "$DISK" | head -n 1 )
 [[ "$RM" == "0" ]] || { echo "DISK can't be removable"; exit 1; }
 
 SIZE=$(lsblk -b -no SIZE "$DISK" | head -n 1 ) 
-(( SIZE > 50 * 1024 * 1024 * 1024 )) || { echo "DISK too small"; exit 1; }
+(( SIZE > 20 * 1024 * 1024 * 1024 )) || { echo "DISK too small"; exit 1; }
 
 echo "Selected disk: $DISK"
 
@@ -26,9 +26,9 @@ sgdisk -n 2:0:+8G -t 2:8200 "$DISK"
 # ROOT
 sgdisk -n 3:0:0 -t 3:8300 "$DISK"
 
-mkfs.vfat -F32 "{$DISK}1"
-mkswap "{$DISK}2"
-mkfs.ext4 -F "{$DISK}3"
+mkfs.vfat -F32 "${DISK}1"
+mkswap "${DISK}2"
+mkfs.ext4 -F "${DISK}3"
 
 swapon "${DISK}2"
 

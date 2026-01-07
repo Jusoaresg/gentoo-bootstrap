@@ -10,4 +10,8 @@ source "$ROOT/scripts/check.sh"
 require_root
 require_uefi
 
-log "Testing"
+log "Starting Gentoo bootstrap"
+
+bash "$ROOT/scripts/disk.sh"
+
+log "Bootstrap finished"
