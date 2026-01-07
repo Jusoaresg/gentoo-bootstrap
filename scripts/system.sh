@@ -23,16 +23,15 @@ emerge net-misc/dhcpcd \
 	sys-process/cronie \
 	net-misc/chrony \
 	sys-apps/mlocate \
-	app-shells/bash-completion
-
-emerge --noreplace sys-auth/dbus sys-auth/elogind
+	app-shells/bash-completion \
+	sys-auth/dbus \ 
+	sys-auth/elogind
 
 rc-update add dhcpcd default
 rc-update add sysklogd default
 rc-update add cronie default
 rc-update add chronyd default
 rc-update add sshd default
-
 rc-update add dbus default
 rc-update add elogind default
 
