@@ -5,7 +5,7 @@ PORTAGE="/mnt/gentoo/etc/portage"
 rsync -av --progress "$ROOT/portage/make.conf" "${PORTAGE}/make.conf"
 rsync -av --progress "$ROOT/portage/binrepos.conf" "$PORTAGE"
 
-chroot /mnt/gentoo /usr/bin/env bash <<EOF 
+chroot /mnt/gentoo /usr/bin/env bash <<'EOF'
 emerge-webrsync
 emerge --sync
 getuto

@@ -7,6 +7,6 @@ emerge sys-boot/grub
 emerge sys-boot/os-prober
 
 grub-install --efi-directory=/efi
-grub-mkconfig -o /efi/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 
 EOF

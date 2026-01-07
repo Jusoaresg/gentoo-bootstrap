@@ -1,4 +1,4 @@
-#!/usr/bin/env 
+#!/usr/bin/env bash
 
 require_root() {
 	[[ $EUID -eq 0 ]] || { echo "Run as admin"; exit 1; }

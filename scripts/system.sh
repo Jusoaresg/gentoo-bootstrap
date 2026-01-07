@@ -18,9 +18,8 @@ sed -i 's/keymap="us"/keymap="br"/' "${GENTOO}/etc/conf.d/keymaps"
 
 chroot /mnt/gentoo /usr/bin/env bash <<EOF 
 
-emerge net-misc/dhcpcd
+emerge net-misc/dhcpcd 
 rc-update add dhcpcd default
-rc-service dhcpcd start
 
 emerge app-admin/sysklogd
 rc-update add sysklogd default
