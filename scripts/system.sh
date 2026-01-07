@@ -24,7 +24,7 @@ emerge net-misc/dhcpcd \
 	net-misc/chrony \
 	sys-apps/mlocate \
 	app-shells/bash-completion \
-	sys-auth/dbus \
+	sys-apps/dbus \
 	sys-auth/elogind
 
 rc-update add dhcpcd default
