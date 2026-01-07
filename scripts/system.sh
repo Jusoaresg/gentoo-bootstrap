@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-EFI_UUID=$(blkid -s UUID -o value "${DISK}1"
-SWAP_UUID=$(blkid -s UUID -o value "${DISK}2"
-ROOT_UUID=$(blkid -s UUID -o value "${DISK}3"
+EFI_UUID=$(blkid -s UUID -o value "${DISK}1")
+SWAP_UUID=$(blkid -s UUID -o value "${DISK}2")
+ROOT_UUID=$(blkid -s UUID -o value "${DISK}3")
 
 GENTOO="/mnt/gentoo"
 FSTAB="${GENTOO}/etc/fstab"
