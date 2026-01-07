@@ -17,5 +17,6 @@ bash "$ROOT/scripts/stage3.sh"
 bash "$ROOT/scripts/portage.sh" "$ROOT"
 bash "$ROOT/scripts/locales.sh"
 bash "$ROOT/scripts/kernel.sh"
+bash "$ROOT/scripts/system.sh"
 
 log "Bootstrap finished"
