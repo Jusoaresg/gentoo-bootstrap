@@ -18,5 +18,6 @@ bash "$ROOT/scripts/portage.sh" "$ROOT"
 bash "$ROOT/scripts/locales.sh"
 bash "$ROOT/scripts/kernel.sh"
 bash "$ROOT/scripts/system.sh"
+bash "$ROOT/scripts/bootloader.sh"
 
 log "Bootstrap finished"
