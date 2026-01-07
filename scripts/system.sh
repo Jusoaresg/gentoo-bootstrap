@@ -18,21 +18,18 @@ sed -i 's/keymap="us"/keymap="br"/' "${GENTOO}/etc/conf.d/keymaps"
 
 chroot /mnt/gentoo /usr/bin/env bash <<EOF 
 
-emerge net-misc/dhcpcd 
+emerge net-misc/dhcpcd \
+	app-admin/sysklogd \
+	sys-process/cronie \
+	net-misc/chrony \
+	sys-apps/mlocate \
+	app-shells/bash-completion
+
 rc-update add dhcpcd default
-
-emerge app-admin/sysklogd
 rc-update add sysklogd default
-
-emerge sys-process/cronie
 rc-update add cronie default
-
-emerge net-misc/chrony
 rc-update add chronyd default
-
 rc-update add sshd default
 
-emerge sys-apps/mlocate
-emerge app-shells/bash-completion
 
 EOF
