@@ -8,7 +8,6 @@ rsync -av --progress "$ROOT/portage/binrepos.conf" "$PORTAGE"
 chroot /mnt/gentoo /usr/bin/env bash <<'EOF'
 emerge-webrsync
 emerge --sync
-getuto
 
 emerge --oneshot app-portage/cpuid2cpuflags
 echo "*/* $(cpuid2cpuflags)" > /etc/portage/package.use/00cpu-flags
