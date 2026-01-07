@@ -32,8 +32,9 @@ mkfs.ext4 -F "${DISK}3"
 
 swapon "${DISK}2"
 
-mkdir -p /mnt/gentoo/efi
+mkdir -p /mnt/gentoo
 mount "${DISK}3" /mnt/gentoo
+mkdir -p /mnt/gentoo/efi
 mount "${DISK}1" /mnt/gentoo/efi
 
 lsblk "$DISK"
