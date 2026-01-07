@@ -15,5 +15,6 @@ log "Starting Gentoo bootstrap"
 bash "$ROOT/scripts/disk.sh"
 bash "$ROOT/scripts/stage3.sh"
 bash "$ROOT/scripts/portage.sh" "$ROOT"
+bash "$ROOT/scripts/locales.sh"
 
 log "Bootstrap finished"
