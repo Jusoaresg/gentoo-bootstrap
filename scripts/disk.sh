@@ -36,4 +36,4 @@ mkdir -p /mnt/gentoo/efi
 mount "${DISK}3" /mnt/gentoo
 mount "${DISK}1" /mnt/gentoo/efi
 
-lbslk "$DISK"
+lsblk "$DISK"
